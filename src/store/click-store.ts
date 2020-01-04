@@ -1,14 +1,13 @@
 import {Store} from "./main";
-import { watch, ref, reactive } from 'vue';
 
-interface Click {
+interface Click extends Object {
     count: number
 }
 
 class ClickStore extends Store<Click> {
     protected data(): Click {
         return {
-            count: 0
+            count: 0,
         };
     }
 
