@@ -2,7 +2,7 @@ import { Store } from "./main";
 class ClickStore extends Store {
     data() {
         return {
-            count: 0
+            count: 0,
         };
     }
     incrementCount() {

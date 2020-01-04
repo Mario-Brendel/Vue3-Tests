@@ -7,8 +7,7 @@ export class Store {
     }
     setup(data) { }
     getState() {
-        let foo = readonly(this.state);
-        return foo;
+        return readonly(this.state);
     }
 }
 //# sourceMappingURL=main.js.map

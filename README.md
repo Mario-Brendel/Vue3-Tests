@@ -1,1 +1,1 @@
-TODO 
+To run the project first run npm i and then npm run dev
