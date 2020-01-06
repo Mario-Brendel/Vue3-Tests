@@ -1,10 +1,11 @@
-import {Store} from "./main";
+import {PersistentStore, Store} from "./main";
+import {CLICK_STORE_NAME} from "./store-names";
 
 interface Click extends Object {
     count: number
 }
 
-class ClickStore extends Store<Click> {
+class ClickStore extends PersistentStore<Click> {
     protected data(): Click {
         return {
             count: 0,
@@ -16,4 +17,4 @@ class ClickStore extends Store<Click> {
     }
 }
 
-export const clickStore: ClickStore = new ClickStore()
+export const clickStore = new ClickStore(CLICK_STORE_NAME);

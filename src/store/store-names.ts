@@ -1,0 +1,1 @@
+export const CLICK_STORE_NAME = "CLICK_STORE";

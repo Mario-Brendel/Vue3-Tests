@@ -1,14 +1,19 @@
 <template>
-    <div>
+    <div v-if="isInitialized">
         <button @click="inc()">Clicked {{ countState.count }} times.</button>
     </div>
 </template>
 
 <script>
     import {clickStore} from "../store/click-store";
+    import {onBeforeMount} from 'vue'
 
     export default {
         setup() {
+            onBeforeMount(async () => await clickStore.init())
+
+            console.log("1");
+
             const inc = () => {
                 clickStore.incrementCount()
 
@@ -18,6 +23,7 @@
 
             return {
                 countState: clickStore.getState(),
+                isInitialized: clickStore.getIsInitialized(),
                 inc
             }
         }
