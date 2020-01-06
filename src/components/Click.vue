@@ -12,8 +12,6 @@
         setup() {
             onBeforeMount(async () => await clickStore.init())
 
-            console.log("1");
-
             const inc = () => {
                 clickStore.incrementCount()
 
