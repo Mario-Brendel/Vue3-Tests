@@ -1,13 +1,14 @@
 <template>
     <div id="app">
-        <click/>
+        <reactivity/>
     </div>
 </template>
 
 <script>
     import Click from './components/Click.vue'
+    import Reactivity from './reactivity/Reactivity.vue'
 
     export default {
-        components: {Click},
+        components: {Click, Reactivity},
     }
 </script>
